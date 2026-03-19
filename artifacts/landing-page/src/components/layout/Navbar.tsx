@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "wouter";
-import { Menu, X, Baby } from "lucide-react";
+import { Menu, X, TrendingUp } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export function Navbar() {
@@ -16,7 +16,7 @@ export function Navbar() {
   const navLinks = [
     { name: "Features", href: "#features" },
     { name: "How it Works", href: "#how-it-works" },
-    { name: "Testimonials", href: "#testimonials" },
+    { name: "Success Stories", href: "#testimonials" },
     { name: "Pricing", href: "#pricing" },
   ];
 
@@ -30,11 +30,11 @@ export function Navbar() {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group cursor-pointer">
-            <div className="bg-gradient-to-br from-primary to-accent p-2 rounded-xl text-white shadow-md group-hover:shadow-lg transition-all duration-300 group-hover:-translate-y-0.5">
-              <Baby className="w-6 h-6" />
+            <div className="bg-gradient-to-br from-primary to-accent p-2 rounded-xl text-white shadow-md group-hover:shadow-lg group-hover:shadow-primary/20 transition-all duration-300 group-hover:-translate-y-0.5">
+              <TrendingUp className="w-6 h-6" />
             </div>
             <span className="font-display font-bold text-xl tracking-tight text-foreground">
-              BabyBloom
+              RankFlow AI
             </span>
           </Link>
 
@@ -61,9 +61,9 @@ export function Navbar() {
             </a>
             <a
               href="#signup"
-              className="px-5 py-2.5 bg-foreground text-background hover:bg-primary hover:text-white rounded-full text-sm font-semibold transition-all duration-300 shadow-md hover:shadow-primary/25 hover:-translate-y-0.5 active:translate-y-0"
+              className="px-5 py-2.5 bg-primary text-primary-foreground hover:bg-primary/90 rounded-full text-sm font-semibold transition-all duration-300 shadow-md hover:shadow-primary/25 hover:-translate-y-0.5 active:translate-y-0"
             >
-              Get Started Free
+              Start Free Trial
             </a>
           </div>
 
@@ -92,7 +92,7 @@ export function Navbar() {
                   key={link.name}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="text-base font-medium text-foreground/80 hover:text-primary p-2 rounded-lg hover:bg-primary/5 transition-colors"
+                  className="text-base font-medium text-foreground/80 hover:text-primary p-2 rounded-lg hover:bg-primary/10 transition-colors"
                 >
                   {link.name}
                 </a>
@@ -107,9 +107,9 @@ export function Navbar() {
                 </a>
                 <a
                   href="#signup"
-                  className="w-full text-center py-3 bg-primary text-white rounded-xl text-sm font-semibold shadow-md"
+                  className="w-full text-center py-3 bg-primary text-primary-foreground rounded-xl text-sm font-semibold shadow-md"
                 >
-                  Get Started Free
+                  Start Free Trial
                 </a>
               </div>
             </div>

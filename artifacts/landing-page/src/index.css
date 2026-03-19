@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 @import "tailwindcss";
 
 @theme inline {
-  --font-sans: 'DM Sans', sans-serif;
-  --font-display: 'Nunito', sans-serif;
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Plus Jakarta Sans', sans-serif;
 
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
@@ -43,66 +43,59 @@
 }
 
 :root {
-  /* Soft cream background */
-  --background: 300 20% 99%;
-  /* Deep purple/slate for text */
-  --foreground: 245 30% 16%;
+  /* Dark, professional B2B SaaS theme by default */
+  --background: 226 44% 7%; /* #0a0e1a */
+  --foreground: 0 0% 98%;
   
-  /* Pastel Purple */
-  --primary: 258 90% 74%;
+  /* Vibrant electric blue/purple */
+  --primary: 239 84% 67%; /* #6366f1 */
   --primary-foreground: 0 0% 100%;
   
-  /* Mint Green */
-  --secondary: 146 70% 79%;
-  --secondary-foreground: 245 30% 16%;
+  /* Neon green highlights */
+  --secondary: 142 71% 45%; /* #22c55e */
+  --secondary-foreground: 226 44% 7%;
   
-  /* Warm Pink */
-  --accent: 340 80% 84%;
-  --accent-foreground: 245 30% 16%;
+  --accent: 239 84% 67%;
+  --accent-foreground: 0 0% 100%;
   
-  /* Muted states */
-  --muted: 258 20% 95%;
-  --muted-foreground: 245 10% 45%;
+  --muted: 226 30% 15%;
+  --muted-foreground: 226 20% 70%;
   
-  /* Card backgrounds */
-  --card: 0 0% 100%;
-  --card-foreground: 245 30% 16%;
+  --card: 226 40% 10%;
+  --card-foreground: 0 0% 98%;
   
-  /* Borders and Rings */
-  --border: 258 20% 90%;
-  --input: 258 20% 90%;
-  --ring: 258 90% 74%;
+  --border: 226 30% 20%;
+  --input: 226 30% 20%;
+  --ring: 239 84% 67%;
   
-  /* System */
   --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 100%;
   
-  --radius: 1rem;
+  --radius: 0.75rem;
 }
 
 .dark {
-  /* Soft dark mode - deep purple/navy */
-  --background: 245 40% 8%;
-  --foreground: 300 20% 96%;
+  --background: 226 44% 7%;
+  --foreground: 0 0% 98%;
   
-  --primary: 258 80% 68%;
+  --primary: 239 84% 67%;
   --primary-foreground: 0 0% 100%;
   
-  --secondary: 146 50% 40%;
-  --secondary-foreground: 0 0% 100%;
+  --secondary: 142 71% 45%;
+  --secondary-foreground: 226 44% 7%;
   
-  --accent: 340 60% 60%;
+  --accent: 239 84% 67%;
   --accent-foreground: 0 0% 100%;
   
-  --muted: 245 30% 15%;
-  --muted-foreground: 245 15% 70%;
+  --muted: 226 30% 15%;
+  --muted-foreground: 226 20% 70%;
   
-  --card: 245 30% 12%;
-  --card-foreground: 300 20% 96%;
+  --card: 226 40% 10%;
+  --card-foreground: 0 0% 98%;
   
-  --border: 245 30% 20%;
-  --input: 245 30% 20%;
-  --ring: 258 80% 68%;
+  --border: 226 30% 20%;
+  --input: 226 30% 20%;
+  --ring: 239 84% 67%;
 }
 
 @layer base {
@@ -111,7 +104,7 @@
   }
   
   body {
-    @apply bg-background text-foreground antialiased selection:bg-primary/20 selection:text-primary;
+    @apply bg-background text-foreground antialiased selection:bg-primary/30 selection:text-primary-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 
@@ -138,9 +131,9 @@
 }
 
 .glass-panel {
-  @apply bg-white/70 dark:bg-black/40 backdrop-blur-xl border border-white/20 shadow-[0_8px_32px_0_rgba(31,38,135,0.07)];
+  @apply bg-[#0a0e1a]/70 backdrop-blur-xl border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)];
 }
 
 .text-gradient {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-secondary;
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-indigo-400 to-secondary;
 }
