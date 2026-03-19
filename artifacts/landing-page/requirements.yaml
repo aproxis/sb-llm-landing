@@ -1,0 +1,17 @@
+packages:
+  "framer-motion": "Needed for beautiful scroll-triggered animations and page transitions"
+  "clsx": "Utility for constructing className strings conditionally"
+  "tailwind-merge": "Utility to merge tailwind classes safely"
+
+images:
+  - path: "artifacts/landing-page/public/images/hero-illustration.png"
+    description: "A beautiful, modern flat vector illustration of a happy parent holding a smiling baby, surrounded by floating pastel growth charts, calendar icons, and sparkles. Soft pastel purple, mint green, and warm pink color palette, friendly and professional."
+    aspect_ratio: "4:3"
+  - path: "artifacts/landing-page/public/images/app-mockup.png"
+    description: "A stylized 3D isometric mockup of a mobile phone showing a colorful baby milestone tracker app interface. Soft pastel purple background with floating abstract spheres and stars."
+    aspect_ratio: "3:4"
+
+notes:
+  - This is a fully static marketing landing page, no active API dependencies.
+  - Using Framer Motion for scroll animations to provide a premium feel.
+  - Theme uses space-separated HSL values as per Tailwind v4 standards.
